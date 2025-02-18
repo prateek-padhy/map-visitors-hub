@@ -12,16 +12,16 @@ interface AddVisitorProps {
 
 // Sample countries data with coordinates explicitly typed as tuples
 const countries: Array<{ name: string; coordinates: [number, number] }> = [
-  { name: 'United States', coordinates: [-95.7129, 37.0902] },
-  { name: 'United Kingdom', coordinates: [-0.1276, 51.5074] },
-  { name: 'France', coordinates: [2.3522, 48.8566] },
-  { name: 'Germany', coordinates: [13.4050, 52.5200] },
-  { name: 'Japan', coordinates: [139.6917, 35.6895] },
-  { name: 'Australia', coordinates: [133.7751, -25.2744] },
-  { name: 'Brazil', coordinates: [-47.8645, -15.7942] },
-  { name: 'India', coordinates: [78.9629, 20.5937] },
-  { name: 'China', coordinates: [104.1954, 35.8617] },
-  { name: 'Canada', coordinates: [-106.3468, 56.1304] },
+  { name: 'United States', coordinates: [-95.7129, 37.0902] as [number, number] },
+  { name: 'United Kingdom', coordinates: [-0.1276, 51.5074] as [number, number] },
+  { name: 'France', coordinates: [2.3522, 48.8566] as [number, number] },
+  { name: 'Germany', coordinates: [13.4050, 52.5200] as [number, number] },
+  { name: 'Japan', coordinates: [139.6917, 35.6895] as [number, number] },
+  { name: 'Australia', coordinates: [133.7751, -25.2744] as [number, number] },
+  { name: 'Brazil', coordinates: [-47.8645, -15.7942] as [number, number] },
+  { name: 'India', coordinates: [78.9629, 20.5937] as [number, number] },
+  { name: 'China', coordinates: [104.1954, 35.8617] as [number, number] },
+  { name: 'Canada', coordinates: [-106.3468, 56.1304] as [number, number] },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 const AddVisitor: React.FC<AddVisitorProps> = ({ onAdd, onClose }) => {
