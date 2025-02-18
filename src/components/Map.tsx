@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -33,25 +32,13 @@ const Map: React.FC<MapProps> = ({ className }) => {
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/dark-v11',
       center: [0, 20],
-      zoom: 2,
-      projection: 'globe',
-      pitch: 45,
+      zoom: 1.5,
     });
 
     map.current.addControl(
-      new mapboxgl.NavigationControl({
-        visualizePitch: true,
-      }),
+      new mapboxgl.NavigationControl(),
       'top-right'
     );
-
-    map.current.on('style.load', () => {
-      map.current?.setFog({
-        color: 'rgb(12, 12, 14)',
-        'high-color': 'rgb(20, 20, 25)',
-        'horizon-blend': 0.2,
-      });
-    });
 
     return () => {
       map.current?.remove();
