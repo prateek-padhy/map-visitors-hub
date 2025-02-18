@@ -10,8 +10,8 @@ interface AddVisitorProps {
   onClose: () => void;
 }
 
-// Sample countries data with coordinates
-const countries = [
+// Sample countries data with coordinates explicitly typed as tuples
+const countries: Array<{ name: string; coordinates: [number, number] }> = [
   { name: 'United States', coordinates: [-95.7129, 37.0902] },
   { name: 'United Kingdom', coordinates: [-0.1276, 51.5074] },
   { name: 'France', coordinates: [2.3522, 48.8566] },
